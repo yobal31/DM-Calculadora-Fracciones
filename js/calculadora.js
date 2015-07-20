@@ -20,7 +20,12 @@ $(document).ready(function(e) {
 		//$.mobile.changePage("#pg_Result", { transition: "slide", changeHash: false });
     });
 	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
-        navigator.app.exitApp();
+        if(navigator.app){
+        	navigator.app.exitApp();
+		}else if(navigator.device){
+			navigator.device.exitApp();
+		}
+	
     });
 });
 

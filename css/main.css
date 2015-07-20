@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html {
+	background: #4472C3;
+}
+#pg_Start{
+	vertical-align:middle;
+	background: #4472C3;
+}
+#page-1 {
+	margin: 0 auto;
+	text-align:center;
+	vertical-align:middle;
+	background: #4472C3;
+}
+#page-1 h2 {
+	color:#FFF;
+	text-shadow:none !important;
+}
+

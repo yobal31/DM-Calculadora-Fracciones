@@ -2,6 +2,13 @@
 
 var a,b,c,d;
 
+$(document).on("mobileinit", function () {
+	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
+		navigator.notification.confirm('¿Desea salir de la App?',confirmCallback);
+        //navigator.app.exitApp();
+    });
+});
+
 $(document).ready(function(e) {
 	$("#number_num_1").numeric();
 	$("#number_num_2").numeric();
@@ -19,15 +26,19 @@ $(document).ready(function(e) {
         Resultado($(this).data("oper"));
 		//$.mobile.changePage("#pg_Result", { transition: "slide", changeHash: false });
     });
-	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
-        if(navigator.app){
-        	navigator.app.exitApp();
-		}else if(navigator.device){
-			navigator.device.exitApp();
-		}
 	
-    });
+	
 });
+
+function confirmCallback(buttonIndex) {
+        if(buttonIndex == 1) {
+            navigator.app.exitApp();
+            return true;
+        }
+        else {
+            return false;
+        }
+}
 
 function NewCalc() {
 	a=0;

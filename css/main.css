@@ -14,8 +14,19 @@ body, html {
 	vertical-align:middle;
 	background: #4472C3;
 }
-#page-1 h2 {
+#page-1 h2, span {
 	color:#FFF;
 	text-shadow:none !important;
 }
+hr {
+	margin:0;
+	padding:0;	
+}
+span {
+	padding: 0px 10px;
+	width:auto;
+	display: block;
+  	word-wrap: break-word;	
+}
+
 

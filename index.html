@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="jquery-mobile/jquery.mobile-1.4.5.min.css">
 <script src="jquery-mobile/jquery-1.11.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="jquery-mobile/jquery.numeric.min.js"></script>
 <script src="js/calculadora.js"></script>
 </head> 
 <body>
@@ -35,49 +36,101 @@
         <td colspan="2"><hr></td>
       </tr>
       <tr>
-      	<td colspan="2"><input type="number" name="number_den_1" id="number_den_1" value="" placeholder="Denominador"  /></td>
-        <td colspan="2"><input type="number" name="number_den_2" id="number_den_2" value="" placeholder="Denominador" /></td>
+      	<td colspan="2"><input type="number" name="number_den_1" id="number_den_1" value="" placeholder="Denominador" min="1"  /></td>
+        <td colspan="2"><input type="number" name="number_den_2" id="number_den_2" value="" placeholder="Denominador" min="1" /></td>
       </tr>
       <tr>
-      	<td><button id="bt_suma" class="ui-btn ui-btn-b ui-mini">+</button></td>
-      	<td><button id="bt_resta" class="ui-btn ui-btn-b ui-mini">-</button></td>
-      	<td><button id="bt_multiplica" class="ui-btn ui-btn-b ui-mini">x</button></td>
-        <td><button id="bt_divide" class="ui-btn ui-btn-b ui-mini">/</button></td>        
+      	<td><button id="bt_suma" class="ui-btn ui-btn-b ui-mini"  data-oper="+">+</button></td>
+      	<td><button id="bt_resta" class="ui-btn ui-btn-b ui-mini" data-oper="-" >-</button></td>
+      	<td><button id="bt_multiplica" class="ui-btn ui-btn-b ui-mini" data-oper="x">x</button></td>
+        <td><button id="bt_divide" class="ui-btn ui-btn-b ui-mini" data-oper="/">/</button></td>        
       </tr>
     </tbody>
   </table>
-  <button id="bt_close_app" class="ui-btn ui-btn-b ui-mini">Cerrar App</button>
+  <button id="bt_close_app2" class="ui-btn ui-btn-b ui-mini">Cerrar App</button>
   </div>
   
 </div>
 
 <div data-role="page" id="pg_Result">
-  <div id="page-1" data-role="content">
-  	<h2 class="">Resultado</h2>
+  <div id="page-1" data-role="content" style="text-align:center;">
+  	<h2 class="">Resultado</h2><br>
     
+    	<table width="96%" border="0">
+          <tbody>
+            <tr>
+              <td><span id="sp_num_1">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_num_2">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_num_4">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_num_simp">15</span></td>
+            </tr>
+            <tr>
+            
+              <td><hr></td>
+              <td><span id="sp_signo">+</span></td>
+              <td><hr></td>
+              <td><span>=</span></td>
+              <td><hr></td>
+              <td><span>=</span></td>
+              <td><hr></td>
+            </tr>
+            <tr>
+              <td><span id="sp_den_1">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_den_2">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_den_4">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_den_simp">15</span></td>
+            </tr>
+          </tbody>
+        </table><br><br>
+		
+        
+        <table width="96%" border="0" style="padding: 10px 10px;">
+          <tbody>
+            <tr>
+              <td><span>Procedimiento</span></td>
+              <td>&nbsp;</td>
+              <td><span>Simplificar</span></td>
+            </tr>
+            <tr>
+              <td><span id="sp_num_3">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_num_simp2">15</span></td>
+            </tr>
+            <tr>
+              <td><hr></td>
+              <td><span>=</span></td>
+              <td><hr></td>
+            </tr>
+            <tr>
+              <td><span id="sp_den_3">15</span></td>
+              <td>&nbsp;</td>
+              <td><span id="sp_den_simp2">15</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+		<br>
     
     <table width="100%" border="0">
       <tbody>
         <tr>
-          <td><button id="bt_suma_r" class="ui-btn ui-btn-b ui-mini">+</button></td>
-          <td><button id="bt_resta_r" class="ui-btn ui-btn-b ui-mini">-</button></td>
-          <td><button id="bt_multiplica_r" class="ui-btn ui-btn-b ui-mini">x</button></td>
-          <td><button id="bt_divide_r" class="ui-btn ui-btn-b ui-mini">/</button></td>
+          <td><button id="bt_suma_r" class="ui-btn ui-btn-b ui-mini" data-oper="+">+</button></td>
+          <td><button id="bt_resta_r" class="ui-btn ui-btn-b ui-mini" data-oper="-">-</button></td>
+          <td><button id="bt_multiplica_r" class="ui-btn ui-btn-b ui-mini" data-oper="x">x</button></td>
+          <td><button id="bt_divide_r" class="ui-btn ui-btn-b ui-mini" data-oper="/">/</button></td>
         </tr>
         <tr>
           <td colspan="2"><button id="bt_new_calc" class="ui-btn ui-btn-b ui-mini">Nuevo c&aacute;lculo</button></td>
-          <td colspan="2"><button id="bt_close_app" class="ui-btn ui-btn-b ui-mini">Cerrar App</button></td>
+          <td colspan="2"><button id="bt_close_app3" class="ui-btn ui-btn-b ui-mini">Cerrar App</button></td>
         </tr>
       </tbody>
     </table>
-
-    <div>
-    	
-    	
-    	
-    	
-    	
-    </div>
     
   </div>
 </div>

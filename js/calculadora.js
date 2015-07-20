@@ -8,6 +8,10 @@ var a,b,c,d;
 //
 function onDeviceReady() {
     // Empty
+	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
+		navigator.notification.confirm('¿Desea salir de la App?',confirmCallback,"Cerrar App");
+        //navigator.app.exitApp();
+    });
 }
 
 $(document).ready(function(e) {
@@ -26,11 +30,7 @@ $(document).ready(function(e) {
 	$("#bt_suma_r,#bt_resta_r,#bt_multiplica_r,#bt_divide_r").click(function(e) {
         Resultado($(this).data("oper"));
 		//$.mobile.changePage("#pg_Result", { transition: "slide", changeHash: false });
-    });
-	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
-		navigator.notification.confirm('¿Desea salir de la App?',confirmCallback,"Cerrar App","Si,No");
-        //navigator.app.exitApp();
-    });
+    });	
 	
 });
 

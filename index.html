@@ -11,10 +11,12 @@
 </head> 
 <body>
 <div data-role="page" id="pg_Start">
-  <div id="page-1" data-role="content">
+  <div id="page-1" data-role="content"><br><br>
   	<h2>Calculadora de fracciones</h2>
-  	<img src="img/logo-white.png" width="128" height="128" alt=""/><br>
-  	<a href="#pg_Calc" class="ui-btn ui-shadow ui-btn-a ui-btn-inline" >Ingresar</a>  
+  	<img src="img/logo-white.png" width="128" height="128" alt=""/><br><br>
+    <button id="bt_start" class="ui-btn ui-btn-b ui-mini ui-btn-inline">Nuevo c&aacute;lculo</button> 
+    
+    <button id="bt_close_app" class="ui-btn ui-btn-b ui-mini ui-btn-inline">Cerrar App</button>  
   </div>
 </div>
 
@@ -44,8 +46,40 @@
       </tr>
     </tbody>
   </table>
+  <button id="bt_close_app" class="ui-btn ui-btn-b ui-mini">Cerrar App</button>
   </div>
   
+</div>
+
+<div data-role="page" id="pg_Result">
+  <div id="page-1" data-role="content">
+  	<h2 class="">Resultado</h2>
+    
+    
+    <table width="100%" border="0">
+      <tbody>
+        <tr>
+          <td><button id="bt_suma_r" class="ui-btn ui-btn-b ui-mini">+</button></td>
+          <td><button id="bt_resta_r" class="ui-btn ui-btn-b ui-mini">-</button></td>
+          <td><button id="bt_multiplica_r" class="ui-btn ui-btn-b ui-mini">x</button></td>
+          <td><button id="bt_divide_r" class="ui-btn ui-btn-b ui-mini">/</button></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="bt_new_calc" class="ui-btn ui-btn-b ui-mini">Nuevo c&aacute;lculo</button></td>
+          <td colspan="2"><button id="bt_close_app" class="ui-btn ui-btn-b ui-mini">Cerrar App</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+    	
+    	
+    	
+    	
+    	
+    </div>
+    
+  </div>
 </div>
 </body>
 </html>

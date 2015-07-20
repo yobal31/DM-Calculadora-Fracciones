@@ -4,7 +4,7 @@
 body, html {
 	background: #4472C3;
 }
-#pg_Start, #pg_Calc{
+#pg_Start, #pg_Calc, #pg_Result{
 	vertical-align:middle;
 	background: #4472C3;
 }

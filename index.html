@@ -7,14 +7,45 @@
 <link rel="stylesheet" type="text/css" href="jquery-mobile/jquery.mobile-1.4.5.min.css">
 <script src="jquery-mobile/jquery-1.11.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/calculadora.js"></script>
 </head> 
 <body>
 <div data-role="page" id="pg_Start">
   <div id="page-1" data-role="content">
   	<h2>Calculadora de fracciones</h2>
   	<img src="img/logo-white.png" width="128" height="128" alt=""/><br>
-  	<a href="calculadora.html" class="ui-btn ui-shadow ui-btn-a ui-btn-inline" >Ingresar</a>  
+  	<a href="#pg_Calc" class="ui-btn ui-shadow ui-btn-a ui-btn-inline" >Ingresar</a>  
   </div>
+</div>
+
+
+<div data-role="page" id="pg_Calc">
+  <div id="page-1" data-role="content">
+  	<h2 class="">Calculadora de fracciones</h2>
+  	<table width="100%" border="0">
+    <tbody>      
+      <tr>
+      	<td colspan="2"><input type="number" name="number_num_1" id="number_num_1" value="" placeholder="Numerador" /></td>
+        <td colspan="2"><input type="number" name="number_num_2" id="number_num_2" value="" placeholder="Numerador" /></td>
+      </tr>
+      <tr>
+      	<td colspan="2"><hr></td>
+        <td colspan="2"><hr></td>
+      </tr>
+      <tr>
+      	<td colspan="2"><input type="number" name="number_den_1" id="number_den_1" value="" placeholder="Denominador"  /></td>
+        <td colspan="2"><input type="number" name="number_den_2" id="number_den_2" value="" placeholder="Denominador" /></td>
+      </tr>
+      <tr>
+      	<td><button id="bt_suma" class="ui-btn ui-btn-b ui-mini">+</button></td>
+      	<td><button id="bt_resta" class="ui-btn ui-btn-b ui-mini">-</button></td>
+      	<td><button id="bt_multiplica" class="ui-btn ui-btn-b ui-mini">x</button></td>
+        <td><button id="bt_divide" class="ui-btn ui-btn-b ui-mini">/</button></td>        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
 </div>
 </body>
 </html>

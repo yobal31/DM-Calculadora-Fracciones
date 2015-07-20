@@ -2,12 +2,13 @@
 
 var a,b,c,d;
 
-$(document).on("mobileinit", function () {
-	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
-		navigator.notification.confirm('¿Desea salir de la App?',confirmCallback);
-        //navigator.app.exitApp();
-    });
-});
+ document.addEventListener("deviceready", onDeviceReady, false);
+
+// PhoneGap is ready
+//
+function onDeviceReady() {
+    // Empty
+}
 
 $(document).ready(function(e) {
 	$("#number_num_1").numeric();
@@ -26,11 +27,15 @@ $(document).ready(function(e) {
         Resultado($(this).data("oper"));
 		//$.mobile.changePage("#pg_Result", { transition: "slide", changeHash: false });
     });
-	
+	$("#bt_close_app,#bt_close_app2,#bt_close_app3").click(function(e) {
+		navigator.notification.confirm('¿Desea salir de la App?',confirmCallback,"Cerrar App","Si,No");
+        //navigator.app.exitApp();
+    });
 	
 });
 
 function confirmCallback(buttonIndex) {
+	alert(buttonIndex);
         if(buttonIndex == 1) {
             navigator.app.exitApp();
             return true;

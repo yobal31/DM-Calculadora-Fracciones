@@ -37,7 +37,7 @@ $(document).ready(function(e) {
 function confirmCallback(buttonIndex) {
 	alert(buttonIndex);
         if(buttonIndex == 1) {
-            navigator.app.exitApp();
+            device.exitApp();
             return true;
         }
         else {
